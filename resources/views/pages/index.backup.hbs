@@ -1,0 +1,110 @@
+{{#contentFor 'seoComponents'}}
+<meta name="description"
+  content="PELUANG BISNIS ONLINE TERBARU PALING MUDAH DAN PALING MENGUNTUNGKAN RAHASIA MENDAPATKAN PASIF INCOME PULUHAN JUTA PERBULAN DARI MARKETPLACE TANPA RIBET, MODAL COPY PASTE">
+<meta name="keywords" content="fingo,sukses,e-commerce,copy,paste,mudah,jutaan,income,bisnis,online">
+{{/contentFor}}
+
+{{#contentFor 'pageScript'}}
+<script>
+  var navbar = $('#navbar')
+  var judul = $('#judul').height()
+
+  var options = {
+    strings: [
+      'Mau jadi <em><span class="text-bolder">Business-man</span></em> kaya dia?',
+      'Mau raih keuntungan sampai <span class="text-bolder">Jutaan</span> Rupiah perbulan?',
+      'Semua itu hanya ada di <span class="text-danger">FINGO</span>!',
+      'Gabung <span class="text-danger">FINGO</span> sekarang dan rasakan nikmatnya!'
+    ],
+    typeSpeed: 40,
+    backSpeed: 20,
+  }
+
+  var typed = new Typed('#runningText', options)
+
+  $(window).ready(function () {
+    var captionW = $('#captionTabelPertumbuhan').width()
+    var captionH = $('#captionTabelPertumbuhan').height()
+
+    $('#tabelPertumbuhan').width(captionW)
+    $('#tabelPertumbuhan').height(captionH)
+  })
+
+  addEventListener('scroll', function () {
+    var scrollY = $(window).scrollTop()
+
+    if (scrollY > judul) navbar.addClass('shadow shadow-sm')
+    else navbar.removeClass('shadow shadow-sm')
+  })
+</script>
+{{/contentFor}}
+
+<section id="judul">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <img src="/storage/img/Businessman.svg" alt="Businessman">
+      </div>
+      <div class="col-12 col-md-6 d-flex">
+        <div class="align-self-center">
+          <h1 class="display-4">
+            <span id="runningText"></span>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="surveyMenunjukkan" class="mt-5">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center">Survey Menunjukkan</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div id="captionTabelPertumbuhan" class="col-12 col-md-6">
+          <h3 class="mb-3">Indonesia Jadi Negara dengan Pertumbuhan E-Commerce Tercepat di Dunia</h3>
+          <p class="lead text-justify">Indonesia adalah Negara Dengan Pertumbuhan e-Commerce Tercepat di Dunia artinya
+            saat ini kita berada di negara yg menjadi pusat perhatian Dunia E-Commerce.</p>
+          <p class="lead text-justify">Lembaga riset asal Inggris, Merchant Machine, merilis daftar sepuluh negara
+            dengan pertumbuhan e-commerce tercepat di dunia. Indonesia memimpin jajaran negara-negara tersebut dengan
+            pertumbuhan 78% pada 2018. Jumlah pengguna internet di Indonesia yang lebih dari 100 juta pengguna menjadi
+            salah satu kekuatan yang mendorong pertumbuhan e-commerce.</p>
+          <p class="lead text-justify">Sumber: <span><a href="https://databoks.katadata.co.id">Katadata</a></span></p>
+        </div>
+        <div class="col-6 d-none d-md-flex">
+          <div class="align-self-center w-100">
+            <p class="mt-4 mb-0">Indonesia</p>
+            <div class="progress w-100">
+              <div class="progress-bar bg-dark" role="progressbar" style="width: 78%;" aria-valuenow="78"
+                aria-valuemin="0" aria-valuemax="100">78%</div>
+            </div>
+            <p class="mt-4 mb-0">Meksiko</p>
+            <div class="progress w-100">
+              <div class="progress-bar bg-dark" role="progressbar" style="width: 59%;" aria-valuenow="59"
+                aria-valuemin="0" aria-valuemax="100">59%</div>
+            </div>
+            <p class="mt-4 mb-0">Filipina</p>
+            <div class="progress w-100">
+              <div class="progress-bar bg-dark" role="progressbar" style="width: 51%;" aria-valuenow="51"
+                aria-valuemin="0" aria-valuemax="100">51%</div>
+            </div>
+            <p class="mt-4 mb-0">Kolombia</p>
+            <div class="progress w-100">
+              <div class="progress-bar bg-dark" role="progressbar" style="width: 45%;" aria-valuenow="45"
+                aria-valuemin="0" aria-valuemax="100">45%</div>
+            </div>
+            <p class="mt-4 mb-0">Uni Emirat Arab</p>
+            <div class="progress w-100">
+              <div class="progress-bar bg-dark" role="progressbar" style="width: 33%;" aria-valuenow="33"
+                aria-valuemin="0" aria-valuemax="100">33%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
