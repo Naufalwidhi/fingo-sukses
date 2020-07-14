@@ -9,7 +9,7 @@
     "watch": "npm run webpack:development -- --watch",
     "development": "nodemon ./bin/www",
     "webpack:development": "cross-env NODE_ENV=development webpack --config ./config/webpack.config.js --progress --hide-modules",
-    "webpack:production": "cross-env NODE_ENV=production webpack --progress ./config/webpack.config.js --hide-modules"
+    "webpack:production": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js --progress --hide-modules"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
