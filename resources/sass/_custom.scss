@@ -1,0 +1,17 @@
+html{
+    scroll-behavior: smooth;
+}
+
+#whatsApp {
+    a {
+        position: fixed;
+        bottom: 1em;
+        right: 1em;
+        height: 5em;
+        width: 5em;
+        background-image: url('/storage/img/wa.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
