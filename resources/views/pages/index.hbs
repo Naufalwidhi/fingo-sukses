@@ -1,39 +1,80 @@
 {{#contentFor 'seoComponents'}}
-  <meta
-    name='description'
-    content='PELUANG BISNIS ONLINE TERBARU PALING MUDAH DAN PALING MENGUNTUNGKAN RAHASIA MENDAPATKAN PASIF INCOME PULUHAN JUTA PERBULAN DARI MARKETPLACE TANPA RIBET, MODAL COPY PASTE'
-  />
-  <meta
-    name='keywords'
-    content='fingo,sukses,e-commerce,copy,paste,mudah,jutaan,income,bisnis,online'
-  />
+<meta name='description'
+  content='PELUANG BISNIS ONLINE TERBARU PALING MUDAH DAN PALING MENGUNTUNGKAN RAHASIA MENDAPATKAN PASIF INCOME PULUHAN JUTA PERBULAN DARI MARKETPLACE TANPA RIBET, MODAL COPY PASTE' />
+<meta name='keywords' content='fingo,sukses,e-commerce,copy,paste,mudah,jutaan,income,bisnis,online' />
 {{/contentFor}}
 
 {{#contentFor 'pageStyle'}}
-  <style>
-    #navbar {
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<style>
+  #navbar {
     transition-timing-function: 'ease-in-out';
     transition-duration: 500ms;
   }
-  </style>
+
+  #founderImg img {
+    width: 100%;
+  }
+</style>
 {{/contentFor}}
 
 {{#contentFor 'pageScript'}}
-  <script>
-    var navbar = $('#navbar')
-    var judul = $('#judul').height()
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var navbar = $('#navbar')
+  var judul = $('#judul').height()
 
-    addEventListener('scroll', function () {
-      var scrollY = $(window).scrollTop()
+  $(window).scroll(function () {
+    var scrollY = $(window).scrollTop()
 
-      if (scrollY > judul) navbar.removeClass('navbar-dark bg-danger').addClass('navbar-light bg-light shadow shadow-sm')
-      else navbar.removeClass('navbar-light bg-light shadow shadow-sm').addClass('navbar-dark bg-danger')
-    })
-  </script>
+    if (scrollY > judul) navbar.removeClass('navbar-dark bg-danger').addClass('navbar-light bg-light shadow shadow-sm')
+    else navbar.removeClass('navbar-light bg-light shadow shadow-sm').addClass('navbar-dark bg-danger')
+  })
+
+  $(window).on('load', function () {
+    // navbar
+    var scrollY = $(window).scrollTop()
+
+    if (scrollY > judul) navbar.removeClass('navbar-dark bg-danger').addClass('navbar-light bg-light shadow shadow-sm')
+    else navbar.removeClass('navbar-light bg-light shadow shadow-sm').addClass('navbar-dark bg-danger')
+  })
+
+  /**
+   * Swiperjs
+   */
+  var swiper = new Swiper('#swiperKategori', {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 10,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 576px
+      576: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      // when window width is >= 1200px
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 50,
+      },
+    },
+  })
+</script>
 {{/contentFor}}
 
 <section id='judul' class='bg-danger'>
-  <div class='container'>
+  <div class='container py-5'>
     <div class='row justify-content-center'>
       <div class='col-12 col-md-6'>
         <img src='/storage/img/Businessman.svg' alt='Businessman' />
@@ -84,17 +125,19 @@
         <h3 class='mb-3'>
           Indonesia Jadi Negara dengan Pertumbuhan E-Commerce Tercepat di Dunia
         </h3>
-        <p class='lead text-justify'>
+        <p class=' text-justify'>
           Indonesia adalah Negara Dengan Pertumbuhan e-Commerce Tercepat di Dunia artinya
           saat ini kita berada di negara yg menjadi pusat perhatian Dunia E-Commerce.
         </p>
-        <p class='lead text-justify'>
+        <p class=' text-justify'>
           Lembaga riset asal Inggris, Merchant Machine, merilis daftar sepuluh negara
-          dengan pertumbuhan e-commerce tercepat di dunia. Indonesia memimpin jajaran negara-negara tersebut dengan
-          pertumbuhan 78% pada 2018. Jumlah pengguna internet di Indonesia yang lebih dari 100 juta pengguna menjadi
+          dengan pertumbuhan e-commerce tercepat di dunia. Indonesia memimpin jajaran negara-negara tersebut
+          dengan
+          pertumbuhan 78% pada 2018. Jumlah pengguna internet di Indonesia yang lebih dari 100 juta pengguna
+          menjadi
           salah satu kekuatan yang mendorong pertumbuhan e-commerce.
         </p>
-        <p class='lead text-justify'>
+        <p class=' text-justify'>
           Survey menunjukkan bahwa
           <span class='text-danger'>
             Rata-Rata Orang (khususnya di Indonesia)
@@ -107,9 +150,11 @@
           <span class='text-danger'>
             Transaksi Online (Internet)
           </span>
-          , baik belanja kebutuhan sekunder maupun primer. ini menunjukkan bahwa Bisnis Online sangat menjanjikan dan sangat menguntungkan.
+          , baik belanja kebutuhan sekunder maupun primer. ini menunjukkan bahwa Bisnis Online sangat
+          menjanjikan dan
+          sangat menguntungkan.
         </p>
-        <p class='lead text-justify'>
+        <p class=' text-justify'>
           Sumber:
           <span>
             <a href='https://databoks.katadata.co.id'>
@@ -118,96 +163,53 @@
           </span>
         </p>
       </div>
-      <div class='col-12 col-md-6'>
+      <div class='col-12 col-md-6 d-none d-md-block'>
         <div class='accordion w-100' id='accordionExample'>
           <div class='card'>
             <div class='card-header' id='headingIndonesiaTercepat'>
               <h2 class='mb-0'>
-                <button
-                  class='btn btn-link btn-block text-left text-dark'
-                  type='button'
-                  data-toggle='collapse'
-                  data-target='#indonesiaTercepat'
-                  aria-expanded='true'
-                  aria-controls='indonesiaTercepat'
-                >
+                <button class='btn btn-link btn-block text-left text-dark' type='button' data-toggle='collapse'
+                  data-target='#indonesiaTercepat' aria-expanded='true' aria-controls='indonesiaTercepat'>
                   Indonesia menjadi negara dengan pertumbuhan e-Commerce tercepat
                 </button>
               </h2>
             </div>
-
-            <div
-              id='indonesiaTercepat'
-              class='collapse show'
-              aria-labelledby='headingIndonesiaTercepat'
-              data-parent='#accordionExample'
-            >
+            <div id='indonesiaTercepat' class='collapse show' aria-labelledby='headingIndonesiaTercepat'
+              data-parent='#accordionExample'>
               <div class='card-body'>
-                <img
-                  class='img-fluid'
-                  src='/storage/img/indonesiaTercepat.png'
-                  alt='Indonesia pertumbuhan tercepat'
-                />
+                <img class='img-fluid' src='/storage/img/indonesiaTercepat.png' alt='Indonesia pertumbuhan tercepat' />
               </div>
             </div>
           </div>
           <div class='card'>
             <div class='card-header' id='headingPenjualan'>
               <h2 class='mb-0'>
-                <button
-                  class='btn btn-link btn-block text-left text-dark collapsed'
-                  type='button'
-                  data-toggle='collapse'
-                  data-target='#penjualan'
-                  aria-expanded='false'
-                  aria-controls='penjualan'
-                >
+                <button class='btn btn-link btn-block text-left text-dark collapsed' type='button'
+                  data-toggle='collapse' data-target='#penjualan' aria-expanded='false' aria-controls='penjualan'>
                   2020 Penjualan Indonesia mencapai 16 Milyar US$
                 </button>
               </h2>
             </div>
-            <div
-              id='penjualan'
-              class='collapse'
-              aria-labelledby='headingPenjualan'
-              data-parent='#accordionExample'
-            >
+            <div id='penjualan' class='collapse' aria-labelledby='headingPenjualan' data-parent='#accordionExample'>
               <div class='card-body'>
-                <img
-                  class='img-fluid'
-                  src='/storage/img/2020Penjualan.png'
-                  alt='10 e-Commerce dengan pengunjung terbanyak'
-                />
+                <img class='img-fluid' src='/storage/img/2020Penjualan.png'
+                  alt='10 e-Commerce dengan pengunjung terbanyak' />
               </div>
             </div>
           </div>
           <div class='card'>
             <div class='card-header' id='headingECommerce'>
               <h2 class='mb-0'>
-                <button
-                  class='btn btn-link btn-block text-left text-dark collapsed'
-                  type='button'
-                  data-toggle='collapse'
-                  data-target='#eCommerce'
-                  aria-expanded='false'
-                  aria-controls='eCommerce'
-                >
+                <button class='btn btn-link btn-block text-left text-dark collapsed' type='button'
+                  data-toggle='collapse' data-target='#eCommerce' aria-expanded='false' aria-controls='eCommerce'>
                   10 e-Commerce dengan pengunjung terbanyak
                 </button>
               </h2>
             </div>
-            <div
-              id='eCommerce'
-              class='collapse'
-              aria-labelledby='headingECommerce'
-              data-parent='#accordionExample'
-            >
+            <div id='eCommerce' class='collapse' aria-labelledby='headingECommerce' data-parent='#accordionExample'>
               <div class='card-body'>
-                <img
-                  class='img-fluid'
-                  src='/storage/img/10eCommerce.png'
-                  alt='10 e-Commerce dengan pengunjung terbanyak'
-                />
+                <img class='img-fluid' src='/storage/img/10eCommerce.png'
+                  alt='10 e-Commerce dengan pengunjung terbanyak' />
               </div>
             </div>
           </div>
@@ -240,17 +242,14 @@
   <div class='container py-5'>
     <div class='row'>
       <div class='col text-center text-danger'>
-        <h3
-          class='font-weight-bolder text-uppercase'
-          style="font-family: 'sans-serif';"
-        >
+        <h3 class='font-weight-bolder text-uppercase' style="font-family: 'sans-serif';">
           Dengan Bangga Mempersembahkan
         </h3>
       </div>
     </div>
     <div class='row justify-content-center mt-4'>
       <div class='col-12 col-md-6 d-flex justify-content-center'>
-        <img class='img-fluid' src='/storage/img/FINGO.png' />
+        <img class='img-fluid' src='/storage/img/brand.png' />
       </div>
     </div>
   </div>
@@ -269,21 +268,22 @@
         </h1>
       </div>
     </div>
-    <div class='row mt-4'>
+    <div class='row'>
       <div class='col d-none d-md-flex'>
         <img class='img-fluid' src='/storage/img/Questions-bro.svg' />
       </div>
       <div class='col-12 col-md-6 d-md-flex text-justify d-flex'>
         <div class='align-self-center'>
           <p class='lead'>
-            Fingo adalah sebuah platform e-commerce sama halnya seperti Tokopedia, Bukalapak, Lazada dan Shopee,dll. Tapi Fingo menggunakan konsep baru dalam memasarkan bisnisnya yaitu dengan konsep bagi hasil bagi para afiliasinya
+            Fingo adalah sebuah platform e-commerce sama halnya seperti Tokopedia, Bukalapak, Lazada dan
+            Shopee,dll.
+            Tapi Fingo menggunakan konsep baru dalam memasarkan bisnisnya yaitu dengan konsep bagi hasil
+            bagi para
+            afiliasinya
           </p>
           <div class='embed-responsive embed-responsive-16by9'>
-            <iframe
-              class='embed-responsive-item'
-              src='https://www.youtube.com/embed/qS7nxfHdZi0?rel=0'
-              allowfullscreen
-            ></iframe>
+            <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/qS7nxfHdZi0?rel=0'
+              allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -295,19 +295,42 @@
   <div class='container py-5'>
     <div class='row'>
       <div class='col text-justify'>
-        <p class='lead'>
-          Fingo dikenal sebagai platform Sosial E-commerce, dimana saat ini, terdapat puluhan ribu produk yang dipasarkan di Fingo. Kita semua sebagai pengguna, bisa jadi sebagian dari "pemilik" e-commerce ini. "Pemilik" yang dimaksud adalah kita dapat mempromosikan marketplace Fingo kepada orang-orang dan biarkan orang belanja apapun di fingo, selanjutnya kita mendapatkan
+        <p>
+          Fingo dikenal sebagai platform Sosial E-commerce, dimana saat ini, terdapat puluhan ribu produk yang
+          dipasarkan di Fingo. Kita semua sebagai pengguna, bisa jadi sebagian dari "pemilik" e-commerce ini.
+          "Pemilik"
+          yang dimaksud adalah kita dapat mempromosikan marketplace Fingo kepada orang-orang dan biarkan orang
+          belanja
+          apapun di fingo, selanjutnya kita mendapatkan
           <span class='text-danger'>
             komisi, bonus pasif income, dan macam-macam pendapatan dari Fingo
           </span>
           seolah-olah kita bekerja dengan Fingo dan memiliki bisnis fingo tersebut.
         </p>
-        <p class='lead'>
-          Bayangkan jika anda membuka sebuah supermarket. Tahap awal anda harus bersusah payah iklankan sana sini untuk menarik orang agar membeli produk di supermarket anda. Sampai saatnya anda tidak perlu lagi mengiklankan karena orang akan datang dengan sendirinya, mereka sudah kenal dan senang berbelanja di supermarket anda
-Begitulah berbisnis fingo. Anda mendaftar hari ini dan upgrade menjadi agen fingo (Prefered Shopper), kemudian anda menyebarkan sebanyak mungkin link anda kepada orang-orang serta meminta mereka mendaftar dengan link anda secara gratis dan meminta mereka berbelanja di fingo. Tentu awalnya pasti sedikit, tapi berjalannya waktu akan banyak yang mengenal dan berbelanja di fingo dengan link anda. Dan pada saat itulah anda akan mendapatkan banyak komisi dari fingo, selama orang-orang berbelanja di marketplace fingo dengan link yang anda bagikan.
+        <p>
+          Bayangkan jika anda membuka sebuah supermarket. Tahap awal anda harus bersusah payah iklankan sana
+          sini untuk
+          menarik orang agar membeli produk di supermarket anda. Sampai saatnya anda tidak perlu lagi
+          mengiklankan
+          karena orang akan datang dengan sendirinya, mereka sudah kenal dan senang berbelanja di supermarket
+          anda
+          Begitulah berbisnis fingo. Anda mendaftar hari ini dan upgrade menjadi agen fingo (Prefered
+          Shopper), kemudian
+          anda menyebarkan sebanyak mungkin link anda kepada orang-orang serta meminta mereka mendaftar dengan
+          link anda
+          secara gratis dan meminta mereka berbelanja di fingo. Tentu awalnya pasti sedikit, tapi berjalannya
+          waktu akan
+          banyak yang mengenal dan berbelanja di fingo dengan link anda. Dan pada saat itulah anda akan
+          mendapatkan
+          banyak komisi dari fingo, selama orang-orang berbelanja di marketplace fingo dengan link yang anda
+          bagikan.
         </p>
-        <p class='lead'>
-          Perlu Diketahui Bahwa Fingo Marketplace Memberikan Pelayanan Terbaik dan Harga Termurah (Dibandingkan Dengan Marketplace Lain). Tentunya Orang-Orang Akan Mendaftar di Marketplace Fingo, Dan Itu Gratis Bahkan Dapat Voucher Belanja Senilai RM5 (Rp. 17.500,-)
+        <p>
+          Perlu Diketahui Bahwa Fingo Marketplace Memberikan Pelayanan Terbaik dan Harga Termurah
+          (Dibandingkan Dengan
+          Marketplace Lain). Tentunya Orang-Orang Akan Mendaftar di Marketplace Fingo, Dan Itu Gratis Bahkan
+          Dapat
+          Voucher Belanja Senilai RM5 (Rp. 17.500,-)
         </p>
       </div>
     </div>
@@ -315,13 +338,13 @@ Begitulah berbisnis fingo. Anda mendaftar hari ini dan upgrade menjadi agen fing
 </section>
 
 <section id='keunggulanFingo'>
-  <div class='jumbotron jumbotron-fluid'>
-    <div class='container py-5'>
+  <div class='jumbotron jumbotron-fluid m-0'>
+    <div class='container'>
       <div class='row'>
-        <div class='col-0 col-md-6'>
+        <div class='col-12 d-md-none'>
           <img class='img-fluid' src='/storage/img/Success.svg' />
         </div>
-        <div class='col-0 col-md-6 d-flex'>
+        <div class='col-12 col-md-6 d-flex'>
           <div class='align-self-center'>
             <h1>
               Hanya di
@@ -329,7 +352,7 @@ Begitulah berbisnis fingo. Anda mendaftar hari ini dan upgrade menjadi agen fing
                 FINGO
               </span>
               Anda akan merasakan
-            :
+              :
             </h1>
             <ul>
               <li>
@@ -349,7 +372,8 @@ Begitulah berbisnis fingo. Anda mendaftar hari ini dan upgrade menjadi agen fing
               </li>
               <li>
                 <p class='lead'>
-                  Harga produk lebih murah dari pasaran (harga grosir), karena produk langsung dari pabrik
+                  Harga produk lebih murah dari pasaran (harga grosir), karena produk langsung dari
+                  pabrik
                 </p>
               </li>
               <li>
@@ -365,6 +389,420 @@ Begitulah berbisnis fingo. Anda mendaftar hari ini dan upgrade menjadi agen fing
             </ul>
           </div>
         </div>
+        <div class='col-md-6 d-none d-md-block'>
+          <img class='img-fluid' src='/storage/img/Success.svg' />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="founder">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <h1 class="text-center">
+          <strong><span class="text-danger">FINGO</span> Group Founder</strong>
+        </h1>
+        <p class="text-center">Adalah Para Top Management yang mana sudah memiliki pengalaman lebih dari 10
+          tahun
+          menduduki Posisi penting di Alibaba Group. Fingo Lahir dari sebuah karya orang-orang Profesional
+          yang
+          berpengalaman lebih dari 10 tahun mengembangkan Alibaba.</p>
+      </div>
+    </div>
+    <div id="founderImg" class="row justify-content-center mt-3">
+      <div class="col-12 col-md-3 mb-3 mb-md-0">
+        <img src="/storage/img/yundong-team.jpg" alt="Yundong Image">
+        <div class="accordion" id="biographYundong">
+          <div class="card">
+            <div class="card-header" id="headingPhotoYundong">
+              <h2 class="mb-0">
+                <button class="btn btn-block text-center" type="button" data-toggle="collapse"
+                  data-target="#collapseBioYundong" aria-expanded="false" aria-controls="collapseBioYundong">
+                  Yundong Liu - Founder
+                </button>
+              </h2>
+            </div>
+            <div id="collapseBioYundong" class="collapse" aria-labelledby="headingPhotoYundong"
+              data-parent="#biographYundong">
+              <div class="card-body">
+                Keahliannya membantu merek fesyen YouZiMeiYi untuk mencapai penjualan tahunan 300 juta
+                yuan.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 mb-3 mb-md-0">
+        <img src="/storage/img/jack-team.jpg" alt="Jack Image">
+        <div class="accordion" id="biographJack">
+          <div class="card">
+            <div class="card-header" id="headingPhotoJack">
+              <h2 class="mb-0">
+                <button class="btn btn-block text-center" type="button" data-toggle="collapse"
+                  data-target="#collapseBioJack" aria-expanded="false" aria-controls="collapseBioJack">
+                  Jack Yi - Founder
+                </button>
+              </h2>
+            </div>
+            <div id="collapseBioJack" class="collapse" aria-labelledby="headingPhotoJack" data-parent="#biographJack">
+              <div class="card-body">
+                Selama masa jabatannya di Alibaba Group, Jack telah terlibat dalam sejumlah strategi dan
+                pengembangan
+                inovatif.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 mb-3 mb-md-0">
+        <img src="/storage/img/messi-team.jpg" alt="Messi Image">
+        <div class="accordion" id="biographMessi">
+          <div class="card">
+            <div class="card-header" id="headingPhotoMessi">
+              <h2 class="mb-0">
+                <button class="btn btn-block text-center" type="button" data-toggle="collapse"
+                  data-target="#collapseBioMessi" aria-expanded="false" aria-controls="collapseBioMessi">
+                  Messi Wang Nan - Founder
+                </button>
+              </h2>
+            </div>
+            <div id="collapseBioMessi" class="collapse" aria-labelledby="headingPhotoMessi"
+              data-parent="#biographMessi">
+              <div class="card-body">
+                Messi memiliki pengalaman luas dan beragam keahlian penjualan langsung dan manajemen
+                rantai pasokan
+                dalam e-commerce.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gudangFingo">
+  <div class="jumbotron jumbotron-fluid m-0">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center">
+            Gudang FINGO di Malaysia
+          </h1>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-4">
+        <div class="col">
+          <img src="/storage/img/gudang1.jpg" alt="Gudang Malaysia" style="width: 100%; height: 100%;">
+        </div>
+        <div class="col">
+          <img src="/storage/img/gudang2.jpg" alt="Gudang Malaysia" style="width: 100%; height: 100%;">
+        </div>
+        <div class="col">
+          <img src="/storage/img/gudang3.jpg" alt="Gudang Malaysia" style="width: 100%; height: 100%;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kategori" class="bg-danger text-white">
+  <div class="container-fluid py-5">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center">
+          Kategori Barang di Fingo
+        </h1>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+      <div class="col-12">
+        <!-- Swiper -->
+        <div id="swiperKategori" class="swiper-container">
+          <div class="swiper-wrapper text-dark">
+            <div class="swiper-slide">
+              <div class="card py-3 px-4 h-100">
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <img src="/storage/img/aksesorisHp.png" alt="Aksesoris Hape">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <p class="lead text-center">Aksesoris Handphone</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card py-3 px-4 h-100">
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <img src="/storage/img/bajuBayi.png" alt="Pakaian Anak">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <p class="lead text-center">Pakaian Anak</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card py-3 px-4 h-100">
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <img src="/storage/img/bajuLaki.png" alt="Pakaian Pria">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <p class="lead text-center">Pakaian Pria Dewasa</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card py-3 px-4 h-100">
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <img src="/storage/img/bajuWanita.png" alt="Pakaian Wanita">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <p class="lead text-center">Pakaian Wanita Dewasa</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card py-3 px-4 h-100">
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <img src="/storage/img/produkKebersihan.png" alt="Produk Kebersihan">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <p class="lead text-center">Produk Kebersihan</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card py-3 px-4 h-100">
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <img src="/storage/img/peralatanRumahTangga.png" alt="Perlatan Rumah Tangga">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <p class="lead text-center">Peralatan Rumah Tangga</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card py-3 px-4 h-100">
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <img src="/storage/img/gadget.png" alt="Gadget">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col d-flex justify-content-center">
+                    <p class="lead text-center">Gadget</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next d-none d-md-block"></div>
+          <div class="swiper-button-prev d-none d-md-block"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="statusSeller">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center">Status Mitra FINGO</h1>
+      </div>
+    </div>
+    <div class="row justify-content-center d-none d-md-flex mt-3">
+      <div class="col">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h5 class="text-center mb-0">
+              First Tier
+            </h5>
+          </li>
+          <li class="list-group-item bg-primary text-white">
+            <h3 class="text-center my-4">
+              Regular Shopper
+            </h3>
+          </li>
+          <li class="list-group-item border-bottom-0 pb-1">
+            <p class="mb-0">Daftar Gratis</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Dapat voucher belanja RM 5</p>
+          </li>
+          <li class="list-group-item pt-1">
+            <p class="mb-0">Dapat harga murah, bisa dijual kembali dengan keuntungan lebih besar</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h5 class="text-center mb-0">
+              Second Tier
+            </h5>
+          </li>
+          <li class="list-group-item bg-primary text-white">
+            <h3 class="text-center my-4">
+              Preferred Shopper
+            </h3>
+          </li>
+          <li class="list-group-item border-bottom-0 pb-1">
+            <p class="mb-0">Upgrade dengan pembelanjaan senilai RM 199 / RM 299</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat voucher belanja RM 199 / RM 299</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat produk senilai RM 199 / RM 299</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat link afiliasi</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat cashback 1-10% setiap belanja pribadi</p>
+          </li>
+          <li class="list-group-item pt-1">
+            <p class="mb-0"
+              title="Semisal Anda merekomendasikan keluarga atau teman Anda untuk bergabung di FINGO (walaupun hanya regular shopper), maka Anda berhak mendapat komisi dari jumlah belanja mereka">
+              Mendapat komisi belanja group mulai 1-10%</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h5 class="text-center mb-0">
+              Third Tier
+            </h5>
+          </li>
+          <li class="list-group-item bg-danger text-white">
+            <h3 class="text-center my-4">
+              Affiliate Marketer
+            </h3>
+          </li>
+          <li class="list-group-item border-bottom-0 pb-1">
+            <p class="mb-0">Harus memiliki 30 PS</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat cashback 1-14% setiap belanja pribadi</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat komisi 14% dari belanja Shopper rekomendasi Anda</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat komisi 4% dari belanja Grup</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat komisi RM 100 jika ada yang bergabung menjadi PS dari rekomendasi Anda</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat RM 50 jika PS anda merekomendasikan PS baru</p>
+          </li>
+          <li class="list-group-item pt-1">
+            <p class="mb-0">Mendapat komisi 20% dari pendapatan AM rekomendasi langsung</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h5 class="text-center mb-0">
+              Fourth Tier
+            </h5>
+          </li>
+          <li class="list-group-item bg-danger text-white">
+            <h3 class="text-center my-4">
+              Affiliate Trainer
+            </h3>
+          </li>
+          <li class="list-group-item border-bottom-0 pb-1">
+            <p class="mb-0">Memiliki 3 AM dan 500 Team Random</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat cashback 1-15,6% setiap belanja pribadi</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat komisi 15,6% dari belanja Shopper rekomendasi Anda</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat komisi 1,6% dari belanja Grup</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat komisi RM 135 jika ada yang bergabung menjadi PS dari rekomendasi Anda</p>
+          </li>
+          <li class="list-group-item border-bottom-0 py-1">
+            <p class="mb-0">Mendapat RM 35 jika PS di Grup Anda merekomendasikan PS baru</p>
+          </li>
+          <li class="list-group-item pt-1">
+            <p class="mb-0">Mendapat komisi 20% dari pendapatan AT rekomendasi langsung</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="videoCashback" class="bg-danger text-white">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center">
+          Video Testimoni dan Cashback
+        </h1>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col d-flex justify-content-center">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aDRZxwRuJ7I"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="daftar">
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-uppercase text-center font-weight-bolder">
+          Keputusan ada ditangan Anda, ambil langkah cepat dan raih sukses bersama FINGO marketplace
+        </h1>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col d-flex justify-content-center">
+        <a href="https://t.publicecommerce.com/16lJg5" target="_blank" class="btn btn-danger btn-lg">Daftar Sekarang</a>
       </div>
     </div>
   </div>

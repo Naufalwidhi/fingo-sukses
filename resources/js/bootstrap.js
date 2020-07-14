@@ -3,7 +3,6 @@ window._ = require('lodash')
 try {
   window.popper = require('popper.js')
   window.$ = window.jquery = require('jquery')
-  window.Swiper = require('swiper')
 
   require('bootstrap')
 } catch (e) {}
