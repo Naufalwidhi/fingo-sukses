@@ -14,6 +14,17 @@ router.get('/', (req, res, next) => {
   }
 })
 
+router.get('/sistem', (req, res, next) => {
+  try {
+    res.render('pages/sistem', {
+      title: 'Sistem - Fingo Sukses',
+      layout: 'layouts/main',
+    })
+  } catch (error) {
+    next(error)
+  }
+})
+
 router.get('/marketing-plan', (req, res, next) => {
   try {
     res.render('pages/marketing', {
